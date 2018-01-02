@@ -9,7 +9,9 @@ $(document).ready(function() {
     var words = newEntry.numberOfWords();
     var vowels = newEntry.numberOfVowels();
     var consonants = newEntry.numberOfConsonants();
+    var teaser = newEntry.getTeaser();
     $('#solution').append("<li>There are " + words + " words in the title</li>");
     $('#solution').append("<li>There are " + vowels + " vowels and " + consonants + " consonants in the body</li>");
+    $('#solution').append("<li>" + "'" + teaser + "'" + "</li>");
   });
 });

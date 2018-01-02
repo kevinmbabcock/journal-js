@@ -25,6 +25,15 @@ Journal.prototype.numberOfConsonants = function() {
   return output;
 };
 
+Journal.prototype.getTeaser = function() {
+  var firstSentence = this.body.split(".");
+  var beginning = firstSentence[0];
+  // console.log(beginning);
+  var teaser = beginning.split(" ", 8);
+  // console.log(teaser);
+  return teaser.join(" ");
+}
+
 
 
 exports.journalModule = Journal;

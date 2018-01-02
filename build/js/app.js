@@ -26,6 +26,15 @@ Journal.prototype.numberOfConsonants = function() {
   return output;
 };
 
+Journal.prototype.getTeaser = function() {
+  var firstSentence = this.body.split(".");
+  var beginning = firstSentence[0];
+  // console.log(beginning);
+  var teaser = beginning.split(" ", 8);
+  // console.log(teaser);
+  return teaser.join(" ");
+}
+
 
 
 exports.journalModule = Journal;
@@ -42,8 +51,10 @@ $(document).ready(function() {
     var words = newEntry.numberOfWords();
     var vowels = newEntry.numberOfVowels();
     var consonants = newEntry.numberOfConsonants();
+    var teaser = newEntry.getTeaser();
     $('#solution').append("<li>There are " + words + " words in the title</li>");
     $('#solution').append("<li>There are " + vowels + " vowels and " + consonants + " consonants in the body</li>");
+    $('#solution').append("<li>" + "'" + teaser + "'" + "</li>");
   });
 });
 
