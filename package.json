@@ -9,6 +9,8 @@
   "author": "Gosia and Kevin",
   "license": "ISC",
   "devDependencies": {
+    "bower-files": "^4.0.0",
+    "browser-sync": "^2.23.2",
     "browserify": "^14.5.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -18,5 +20,13 @@
     "gulp-util": "^3.0.8",
     "jshint": "^2.9.5",
     "vinyl-source-stream": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yetka/js-journal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yetka/js-journal/issues"
+  },
+  "homepage": "https://github.com/yetka/js-journal#readme"
 }
