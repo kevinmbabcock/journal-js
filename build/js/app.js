@@ -22,7 +22,9 @@ Journal.prototype.numberOfVowels = function() {
 
 Journal.prototype.numberOfConsonants = function() {
   var vowels = this.numberOfVowels();
-  var output = this.body.length - vowels;
+  var characters = this.body.replace(/[^a-zA-Z]/g, '');
+  // console.log(characters);
+  var output = characters.length - vowels;
   return output;
 };
 
