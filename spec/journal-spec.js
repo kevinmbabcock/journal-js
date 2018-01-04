@@ -1,7 +1,7 @@
-var Journal = require('./../js/journal.js').journalModule;
+import { Journal } from './../js/journal.js';
 
 describe('Journal', function() {
-  var reusableEntry;
+  let reusableEntry;
 
   beforeEach(function() {
     reusableEntry = new Journal("this is a title","This is a body");
