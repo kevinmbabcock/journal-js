@@ -1,12 +1,12 @@
-var gulp = require('gulp');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var utilities = require('gulp-util');
-var del = require('del');
-var jshint = require('gulp-jshint');
-var lib = require('bower-files')({
+let gulp = require('gulp');
+let browserify = require('browserify');
+let source = require('vinyl-source-stream');
+let concat = require('gulp-concat');
+let uglify = require('gulp-uglify');
+let utilities = require('gulp-util');
+let del = require('del');
+let jshint = require('gulp-jshint');
+let lib = require('bower-files')({
   "overrides":{
     "bootstrap" : {
       "main": [
@@ -17,9 +17,9 @@ var lib = require('bower-files')({
     }
   }
 });
-var browserSync = require('browser-sync').create();
-var buildProduction = utilities.env.production;
-var babelify = require('babelify');
+let browserSync = require('browser-sync').create();
+let buildProduction = utilities.env.production;
+let babelify = require('babelify');
 
 gulp.task('jsBrowserify', ['concatInterface'], function() {
   return browserify({ entries: ['./tmp/allConcat.js'] })

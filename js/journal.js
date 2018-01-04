@@ -4,7 +4,6 @@ export class Journal {
   this.body = body;
 }
 
-
   numberOfWords() {
     let splitString = this.title.split(" ");
     return splitString.length;
